@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Accounts</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-lighy bg-light">
+      <a href="" class="navbar-brand">Accounts</a>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a href="accounts-view" class="nav-link">Accounts</a>
+        </li>
+        <li class="nav-item">
+          <a href="add-account-view" class="nav-link">Add Account</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="container-fluid">
+      <!-- Accounts view -->
+      <div class="row view" id="accounts-view">
+        <div class="col-10 offset-1">
+          <h2 class="display-4 m-4">Accounts</h2>
+          <div class="col-8 offset-2">
+            <table class="table table-striped">
+              <thead class="thead-dark">
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>Last name</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Edit</th>
+                  <th>Delete</th>
+                </tr>
+              </thead>
+              <tbody id="accounts-table-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- Accounts view end -->
+      <!-- Add accounts view -->
+      <div class="row view" id="add-account-view">
+        <div class="col-10 offset-1">
+          <h2 class="display-4 m-4">Add accounts</h2>
+          <div class="col-8 offset-2">
+            <input type="text" class="form-control" placeholder="id" /><br />
+            <input type="text" class="form-control" placeholder="name" /><br />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="last name"
+            /><br />
+            <input type="text" class="form-control" placeholder="email" /><br />
+            <input type="text" class="form-control" placeholder="phone" /><br />
+            <button id="save" class="form-control btn btn-info">Save</button>
+          </div>
+        </div>
+      </div>
+      <!-- Add accounts view end -->
+      <!-- Edit account view -->
+      <div class="row view" id="edit-account-view">
+        <div class="col-10 offset-1">
+          <h2 class="display-4 m-4">Edit accounts</h2>
+          <div class="col-8 offset-2">
+            <input type="text" class="form-control eId" /><br />
+            <input type="text" class="form-control eName" /><br />
+            <input type="text" class="form-control eLastName" /><br />
+            <input type="text" class="form-control eEmail" /><br />
+            <input type="text" class="form-control ePhone" /><br />
+            <button id="edit" class="form-control btn btn-warning">Edit</button>
+          </div>
+        </div>
+      </div>
+      <!-- Edit account view end-->
+    </div>
+    <script src="db.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
